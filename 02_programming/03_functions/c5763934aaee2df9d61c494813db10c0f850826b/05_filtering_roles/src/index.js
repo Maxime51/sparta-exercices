@@ -14,7 +14,6 @@ function filteredRoles(arrayPersons,role = "Teacher"){
   // Code the function here.
   const arrayVide = [];
   let  array = [{}];
-  console.log(arrayPersons.filter(toto => toto.role === role));
   if((arrayPersons.filter(index => index.role === role)).length !==  0){
     array = arrayPersons.filter(element => element.role === role);
     return array;
