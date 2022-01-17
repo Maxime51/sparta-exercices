@@ -6,13 +6,10 @@ function arrayCrusher(firstArray, secondArray) {
 
 function recursiveBouncer(list) {
   // code here
-  if((list.length) === 0){
-    return;
-  }else{
-    let [first] = list;
-    list.shift();
-    console.log(first);
-    return recursiveBouncer(list);
+  if(list.length > 0){
+    const [number,...other] = list;
+    console.log(number);
+    return recursiveBouncer(other);
   }
 }
 
