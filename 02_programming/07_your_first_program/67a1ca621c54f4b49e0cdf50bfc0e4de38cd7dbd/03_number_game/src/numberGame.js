@@ -11,7 +11,7 @@ function numberGame(reader, min = 1, max = 100) {
     if(min === max){
       if(number === min){
         console.log("You won! \n");
-        process.close;
+        reader.close;
       }
     }
     if (number > randomNumber){
@@ -28,7 +28,7 @@ function numberGame(reader, min = 1, max = 100) {
     }
     if (number == randomNumber || number === 100 || number === 1){
       console.log("You won! \n");
-      process.close;
+      reader.close;
     }
     question();
   }
