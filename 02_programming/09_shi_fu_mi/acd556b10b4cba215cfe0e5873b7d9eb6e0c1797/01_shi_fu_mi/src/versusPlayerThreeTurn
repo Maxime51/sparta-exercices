@@ -1,0 +1,138 @@
+
+function versusIA(reader){
+  //Declarate a arrayOfChoice who contain the object rock, paper, scissors
+  const arrayOfChoice = [{
+  // Rock
+    key : 0,
+    name : "rock",
+    value : "\ud83e\udd1c",
+    heighterOf : "scissors",
+    lowerOf : "paper",
+    egalOf : "rock"
+  },{
+  //Paper
+    key : 1,
+    name : "paper",
+    value : "\ud83e\udd1a",
+    heighterOf : "rock",
+    lowerOf : "scissors",
+    egalOf : "paper"
+  },{
+  //Scissors
+    key : 2,
+    name : "scissors",
+    value : "\ud83e\udd1e",
+    heighterOf : "paper",
+    lowerOf : "rock",
+    egalOf : "scissors"
+  }];
+  let resulMatch = [0,0];
+
+  //Declarate function log who print pictures of responses
+  function log (array,userRep,userRep2) {
+
+    console.log("First Player move \n");
+    console.log(array[userRep-1].value);
+    console.log("Second Player move \n");
+    console.log(array[userRep2-1].value);
+    console.log("\n\n");
+
+  }
+
+
+  //Declarate function Question
+  function questionPlayer1 (){
+    reader.question("(Player 1) Merci de choisir : [1 : Rock, 2 : Paper, 3 : Scissors] \n > \n", questionPlayer2);
+  }
+  //Declarate function Question
+  function questionPlayer2 (userRep){
+    reader.question("(Player 2) Merci de choisir : [1 : Rock, 2 : Paper, 3 : Scissors] \n > \n", userRep2 => {
+      return response(userRep,userRep2);
+    });
+  }
+
+  //Declarate function Compare who return console log win or not
+  function compare (array,userRep,userRep2){
+    if ((array[userRep-1].heighterOf === array[userRep2-1].name)) {
+
+      resulMatch[0] = resulMatch[0] + 1;
+      console.log("The Player 1 Won !!");
+
+    }else if ((array[userRep-1].lowerOf === array[userRep2-1].name)) {
+
+      console.log("The Player 2 Won !!");
+      resulMatch[1] = resulMatch[1] + 1;
+
+    }
+    else if ((array[userRep-1].egalOf === array[userRep2-1].name)) {
+
+      console.log("Match Null !!");
+
+    }
+
+    console.log(" ----------------------------------");
+    console.log(` --  PLAYER : ${resulMatch[0]} || IA :  ${resulMatch[1]}       --`);
+    console.log(" ----------------------------------\n");
+
+  }
+
+  //Declarate function Response
+  function response(userRep,userRep2) {
+    if ((isNaN(userRep) === true) || userRep > 3) {
+      console.log("Joueur 1, merci d'ecrire 1 ou 2 ou 3 \n");
+      questionPlayer1();
+
+    }else if ((isNaN(userRep2) === true) || userRep2 > 3) {
+      console.log("Joueur 2, merci d'ecrire 1 ou 2 ou 3 \n");
+      questionPlayer2(userRep);
+    }else{
+      log(arrayOfChoice,userRep,userRep2);
+      compare(arrayOfChoice,userRep,userRep2);
+
+      if (resulMatch[0] === 3) {
+
+        console.log(" ----------------------------------");
+        console.log(" -----------END OF GAME------------");
+        console.log(" --------THE PLAYER 1 HAS WON------");
+        console.log(" ----------------------------------");
+        //reStartGame();
+        reader.close();
+      }else if (resulMatch[1] === 3) {
+
+        console.log(" ----------------------------------");
+        console.log(" -----------END OF GAME------------");
+        console.log(" --------THE PLAYER 2 HAS WON------");
+        console.log(" ----------------------------------");
+        // reStartGame();
+        reader.close();
+      }else{
+        questionPlayer1();
+      }
+
+
+    }
+
+  }
+
+  /*function reStartGame (){
+
+    reader.question("Play again ? (Y,n) \n >", again => {
+      if (again === "Y" || again === "y") {
+        return startGameMessages(reader);
+      }else if (again === "N" || again === "n") {
+        reader.close();
+      }
+      else{
+        console.log("(Y,n)");
+        reStartGame();
+      }
+
+    });
+  }*/
+  console.log(" --------------------------------------------------------------------");
+  console.log(" --                    PLAYER VS IA 3 TURN                         --");
+  console.log(" --------------------------------------------------------------------");
+  questionPlayer1();
+}
+
+module.exports = versusIA;
