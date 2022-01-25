@@ -1,10 +1,5 @@
-const readline = require("readline");
-const {updateState} = require("./gameState.js");
-const reader = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 
+const {updateState} = require("./gameState.js");
 
 
 
@@ -38,4 +33,4 @@ function renderBoard(state) {
 
 
 
-module.exports = {renderBoard,renderRow,renderCell,updateState,reader};
+module.exports = {renderBoard,renderRow,renderCell,updateState};

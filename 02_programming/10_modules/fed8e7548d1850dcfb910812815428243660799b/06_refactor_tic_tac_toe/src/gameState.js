@@ -6,7 +6,6 @@ const state = {
 };
 function updateState(coordinate,currentPlayer) {
   const line = state[coordinate.letter];
-
   line[coordinate.digit] = currentPlayer;
 }
 
