@@ -24,9 +24,6 @@ function isColorful(number) {
   }
   finalArray = [...tab1,...tab2,...tab3,...tab4];
 
-  finalArray.forEach( (element,element2) => {
-
-  });
   const findDuplicates = (arr) => {
     let retour = true;
     let sorted_arr = arr.slice().sort();
