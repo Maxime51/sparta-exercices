@@ -1,3 +1,4 @@
+
 function arrayCrusher(firstArray, secondArray) {
   // code here
   const thirdArray = [...firstArray,...secondArray];

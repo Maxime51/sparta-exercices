@@ -24,17 +24,21 @@ function logInfos(user) {
     address: {
       city: "<REDACTED>",
       country: "<REDACTED>",
-    },
-  };
+    }
 
+  };
   let {
     firstName,
     lastName,
-    address: { city , country},
-  } = user;// Change here
+    address: { city, country},
+
+  } = {...redactedUser,user};// Change here
 
   console.log(`${firstName} ${lastName} lives in ${city}, ${country}.`);
+
+
 }
+
 //John Rambo lives in Hope, Canada.
 module.exports = {
   getConfig,
