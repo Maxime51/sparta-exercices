@@ -9,18 +9,17 @@ const reader = readline.createInterface({
 // Code here
 function pwd(){
   const data = process.cwd().split("/");
+  data[0]= ".";
   data.forEach((element,index) => console.log(`${index} - ${element}`));
   reader.question("Choose a number > \n",keyboard => finder(keyboard,data));
 }
 function finder(keyboard,data){
   const lengthOflines = data.length;
-  let chaine = "";
+  let chaine="";
   for(let i = 1; i < (lengthOflines- parseInt(keyboard)) ; i++){
-    chaine = `${chaine}../`;
+    chaine = "../"+chaine;
   }
-  if(parseInt(keyboard) === lengthOflines){
-    chaine = ".";
-  }
+
   console.log(fs.readdirSync(chaine));
   //console.log(keyboard);
 }
