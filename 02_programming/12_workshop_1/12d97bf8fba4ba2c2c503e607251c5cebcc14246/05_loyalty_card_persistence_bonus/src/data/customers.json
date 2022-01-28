@@ -27,12 +27,9 @@
         400
       ]
     ],
-    "usedFidelityPoints": 0,
-    "fidelityPoints": 96.45,
-    "address": {
       "city": "New York",
       "country": "United States of America"
-    }
+
   },
   {
     "id": "af7bce0f-0f44-4b54-b333-7ea46ddb5b3d",
@@ -40,18 +37,15 @@
     "lastName": "Sponge",
     "email": "sponge.bob@fake.local",
     "birthDate": "26/05/1932",
-    "purchaseHistory": [
+    "purchase": [
       [
         "13/09/2020",
         1200
       ]
     ],
-    "usedFidelityPoints": 0,
-    "fidelityPoints": 60,
-    "address": {
       "city": "Atlantis",
       "country": "Deepsea"
-    }
+
   },
   {
     "id": "9a5ef4e4-1c5c-42c1-8d5d-e9cfcdadce79",
@@ -59,12 +53,8 @@
     "lastName": "Andthechocolatefactory",
     "email": "charlie.andthechocolatefactory@fake.local",
     "birthDate": "03/08/1946",
-    "purchaseHistory": [],
-    "usedFidelityPoints": 0,
-    "fidelityPoints": 0,
-    "address": {
+    "purchase": [],
       "city": "",
       "country": ""
-    }
   }
 ]
