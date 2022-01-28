@@ -14,14 +14,7 @@ const userConfig = {
 const config = getConfig(userConfig);
 console.log(config);
 
-logInfos({
-  firstName: "John",
-  lastName: "Rambo",
-  address: {
-    city: "Hope",
-    country: "Canada",
-  },
-});
+logInfos({ lastName: "Toto" });
 
 const numbers = arrayCrusher([1, 2], [3, 4]);
 console.log(numbers);

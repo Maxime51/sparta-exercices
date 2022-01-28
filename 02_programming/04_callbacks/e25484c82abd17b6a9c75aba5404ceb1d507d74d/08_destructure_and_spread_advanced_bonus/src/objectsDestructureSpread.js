@@ -28,11 +28,11 @@ function logInfos(user) {
 
   };
   let {
-    firstName,
-    lastName,
-    address: { city, country},
+    firstName = "<REDACTED>",
+    lastName = "<REDACTED>",
+    address: { city = "<REDACTED>", country = "<REDACTED>"}
 
-  } = {...redactedUser,user};// Change here
+  } = {...redactedUser,...user};// Change here
 
   console.log(`${firstName} ${lastName} lives in ${city}, ${country}.`);
 

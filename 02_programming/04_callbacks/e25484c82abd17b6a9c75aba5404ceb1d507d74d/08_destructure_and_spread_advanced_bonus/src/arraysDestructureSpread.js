@@ -5,12 +5,12 @@ function arrayCrusher(firstArray, secondArray) {
   return thirdArray;
 }
 
+
 function recursiveBouncer(list) {
-  // code here
-  if(list.length > 0){
-    const [number,...other] = list;
-    console.log(number);
-    return recursiveBouncer(other);
+  const [head, ...tail] = list;
+  console.log(head);
+  if (tail.length > 0) {
+    recursiveBouncer(tail);
   }
 }
 
