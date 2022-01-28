@@ -1,13 +1,14 @@
 import { clear } from "console";
 import readline from "readline";
 import { addCustomer,chooseCustomer} from "./customer.js";
-import { customer } from "./list.js";
+import { loadData } from "./list.js";
+
 const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-
+loadData();
 
 function chooseAnAction (){
   clear();
@@ -30,5 +31,9 @@ function chooseAnAction (){
   });
 }
 chooseAnAction();
+
+
+
+//const obj = JSON.parse(fileRead);
 
 export {chooseAnAction};

@@ -77,6 +77,7 @@ function chooseAnActionTwo(choice,reader,keyboard){
 let total = 0;
 function showCustomer(keyboard,reader){
   clear();
+  console.log("===========================>>>>>",keyboard);
   console.log("*************************************************");
   console.log("*************************************************");
   console.log(`${(customer[keyboard-1].firstName).toUpperCase()} ${(customer[keyboard-1].lastName).toUpperCase()}'S INFORMATION`);
@@ -91,9 +92,9 @@ function showCustomer(keyboard,reader){
   printCustomer(keyboard,reader);
 }
 function totalPurchase(keyboard){
+  total = 0;
   customer[keyboard-1].purchase.forEach(elem => {
-    const number = elem.split("-");
-    total = total + parseInt(number[0]);
+    total = total + parseInt(elem[1]);
   });
   return total;
 }
@@ -106,6 +107,7 @@ function addNewPurchase(keyboard,reader){
   reader.question("\ud83e\udd16 Purchase amount \n >",purchase => addPurchase(purchase,keyboard,reader));
 }
 function showPurchaseHistory(keyboard,reader){
+
   console.log("*************************************************");
   console.log("*************************************************");
   console.log(`${(customer[keyboard-1].firstName).toUpperCase()} ${(customer[keyboard-1].lastName).toUpperCase()}'S PURCHASE HISTORY`);
