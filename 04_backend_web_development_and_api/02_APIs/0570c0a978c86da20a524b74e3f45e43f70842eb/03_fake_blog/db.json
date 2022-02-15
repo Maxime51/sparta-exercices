@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "title": "This is a test",
+      "author": "Frieda",
+      "id": 2
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 3
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 4
+    },
+    {
+      "title": "This is a test",
+      "author": "Frieda",
+      "id": 5
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 6
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 7
+    },
+    {
+      "title": "This is a test",
+      "author": "Frieda",
+      "id": 8
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 9
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 10
+    },
+    {
+      "title": "This is a test",
+      "author": "Frieda",
+      "id": 11
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 12
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 13
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 14
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 15
+    },
+    {
+      "title": "Test",
+      "author": "Bob Marley",
+      "id": 16
+    }
+  ]
+}
