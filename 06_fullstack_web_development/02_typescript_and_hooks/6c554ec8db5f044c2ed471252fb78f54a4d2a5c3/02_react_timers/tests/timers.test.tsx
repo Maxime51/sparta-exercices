@@ -5,7 +5,7 @@ describe("React timers", () => {
   jest.setTimeout(5000);
   beforeEach(async () => {
     await openBrowser({ headless: true });
-    await goto(process.env.BASE_URL || "");
+    await goto(process.env.BASE_URL || "http://localhost:8080");
   });
 
   afterEach(async () => {

@@ -8,15 +8,18 @@ type TimerProps = {
 export const Timer: React.FC<TimerProps> = ({ timerId, removeTimer }) => {
   const [count, setCount] = useState(0);
 
+  const time = setTimeout(() => {
+    setCount(count + 1);
+  }, 1000);
+
   useEffect(() => {
-    setTimeout(() => {
-      setCount(count + 1);
-    }, 1000);
+    time;
   }, [count]);
 
   function deleteTimer(event: any) {
     const parent = document.getElementById("listTimer");
     const idParent = event.target.parentNode;
+    clearTimeout(time);
     parent?.removeChild(idParent);
   }
 
